@@ -6,6 +6,22 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 
+        with st.sidebar:
+            app = option_menu(
+                menu_title='Main Menu ',
+                options=['HomePage', 'About', 'DataInsight', 'Feedback'],
+                icons=['house-fill'],
+                menu_icon='chat-text-fill',
+                default_index=0,
+                styles={
+                    "container": {"padding": "5!important", "background-color": 'black'},
+                    "icon": {"color": "white", "font-size": "20px"},
+                    "nav-link": {"color": "white", "font-size": "18px", "text-align": "left", "margin": "0px",
+                                 "--hover-color": "blue"},
+                    "nav-link-selected": {"background-color": "#02ab21"}, }
+
+            )
+
 # Load the model with a correctly formatted path
 model = load_model(r'C:\Users\shaum\Major project\Stock Predictions Model.keras')
 
